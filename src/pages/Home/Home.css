@@ -1,0 +1,69 @@
+.hero-wrapper {
+  height: 100vh;
+  background: url(../../assets/images/hero-bg.png);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.time-wrap {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.timer-number {
+  line-height: 0.8;
+}
+
+.timer-dot {
+  width: 18px;
+  height: 22px;
+  background-color: var(--pink);
+  margin-bottom: 3rem;
+}
+
+.hero-btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-btns button {
+  width: 222px;
+  height: 72px;
+}
+
+/* welcome-wrapper STARTS ============================= */
+.welcome-wrapper {
+  background: url(../../assets/images/bg-2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+}
+.welcome {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+.welcome-left,
+.welcome-right {
+  flex: 1;
+}
+
+.welcome-left img {
+  width: 100%;
+}
+/* welcome-wrapper ENDS ============================= */
