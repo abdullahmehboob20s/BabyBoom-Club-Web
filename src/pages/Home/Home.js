@@ -1,7 +1,21 @@
+import React from "react";
 import "./Home.css";
 import welcomeImg from "assets/images/welcome-img.png";
+import Footer from "layouts/Footer/Footer";
+import TeamCards from "components/Cards/TeamCards/TeamCards";
+import teamImg1 from "assets/images/team-img-1.png";
+
+import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+
+import SwiperCore, { Navigation } from "swiper";
+SwiperCore.use([Navigation]);
 
 function Home() {
+  let navigationPrevRef = React.useRef(null);
+  let navigationNextRef = React.useRef(null);
   return (
     <div>
       {/* HERO STARTS */}
@@ -83,6 +97,91 @@ function Home() {
         </div>
       </div>
       {/* WELCOME END */}
+
+      {/* OUR TEAM START */}
+      <div className="our-team-wrapper">
+        <div className="container-wrapper">
+          <div className="our-team py-100px">
+            <p className="text-center dark-blue fs-96px weight-7 teko ">
+              Our Team
+            </p>
+            <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-70px">
+              Our commitment as a team to this project is one that is beyond a
+              successful token sale, but towards building a product that our
+              community loves, enjoys and also benefits from.
+            </p>
+
+            <div className="team-cards mb-70px">
+              <Swiper
+                slidesPerView={4}
+                spaceBetween={60}
+                // onInit={(swiper) => {
+                //   swiper.params.navigation.nextEl = navigationNextRef.current;
+                //   swiper.params.navigation.prevEl = navigationPrevRef.current;
+                //   swiper.navigation.init();
+                //   swiper.navigation.update();
+                // }}
+                onSwiper={(swiper) => {
+                  // Delay execution for the refs to be defined
+                  setTimeout(() => {
+                    // Override prevEl & nextEl now that refs are defined
+                    swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    swiper.params.navigation.nextEl = navigationNextRef.current;
+
+                    // Re-init navigation
+                    swiper.navigation.destroy();
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                  });
+                }}
+                navigation={{
+                  prevEl: navigationPrevRef.current,
+                  nextEl: navigationNextRef.current,
+                }}
+              >
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+                <SwiperSlide>
+                  <TeamCards img={teamImg1} />
+                </SwiperSlide>
+              </Swiper>
+            </div>
+
+            <div className="slider-btns">
+              <button className="pointer" ref={navigationPrevRef}>
+                <HiArrowNarrowLeft />
+              </button>
+              <button className="pointer" ref={navigationNextRef}>
+                <HiArrowNarrowRight />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* OUR TEAM ENDS */}
+
+      {/* Footer STARTS */}
+      <Footer />
+      {/* Footer END */}
     </div>
   );
 }

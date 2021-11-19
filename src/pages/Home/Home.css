@@ -67,3 +67,32 @@
   width: 100%;
 }
 /* welcome-wrapper ENDS ============================= */
+
+/* our-team-wrapper STARTS */
+.our-team-wrapper {
+  background: url(../../assets/images/big-bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.slider-btns button {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #04060f;
+  color: #04060f;
+  border-radius: 50%;
+  font-size: 1.5rem;
+}
+/* our-team-wrapper ENDS */

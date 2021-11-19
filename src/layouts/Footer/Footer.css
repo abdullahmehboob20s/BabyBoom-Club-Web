@@ -1,0 +1,25 @@
+.footer-wrapper {
+  background: url(../../assets/images/bg-2.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 88px;
+}
+.verified {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
