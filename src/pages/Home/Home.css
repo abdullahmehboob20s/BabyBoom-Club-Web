@@ -95,4 +95,131 @@
   border-radius: 50%;
   font-size: 1.5rem;
 }
+
+.accordions {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
 /* our-team-wrapper ENDS */
+
+/* ROADMAP STARTS */
+.roadmap-wrapper {
+  background: url(../../assets/images/roadmap-bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.roadmap-content-wrapper {
+  /* border: 2px solid red; */
+}
+
+.roadmap-content {
+  height: 1250px;
+  position: relative;
+  width: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 58px;
+  align-items: center;
+  background-color: transparent;
+  /* overflow: hidden; */
+  /* padding-top: 150px; */
+
+  margin-bottom: 100px;
+}
+.roadmap-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  border: 3px dashed #04060f;
+  z-index: -1;
+}
+.roadmap-box {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  /* background-color: red; */
+  position: relative;
+}
+
+.roadmap-box-content {
+  position: absolute;
+  top: 50%;
+
+  transform: translateY(-50%);
+  width: 620px;
+  /* height: 198px; */
+  padding: 36px;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+}
+
+.roadmap-box-content.left {
+  right: 150%;
+}
+.roadmap-box-content.right {
+  left: 150%;
+}
+
+.roadmap-box-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background-color: red; */
+  background: #d0a9e8;
+  opacity: 0.18;
+  backdrop-filter: blur(100px);
+  z-index: -1;
+}
+.roadmap-box.bot {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 100000;
+}
+.bottle {
+  /* border: 2px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 57.39px;
+  height: 148px;
+}
+
+.milk {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  /* height: 80px; */
+  height: 10px;
+  background-color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 20px;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 20px;
+
+  border: 2px solid #3f2409;
+}
+
+/* ROADMAP ENDS */

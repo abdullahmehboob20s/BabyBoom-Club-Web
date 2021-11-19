@@ -4,6 +4,7 @@ import welcomeImg from "assets/images/welcome-img.png";
 import Footer from "layouts/Footer/Footer";
 import TeamCards from "components/Cards/TeamCards/TeamCards";
 import teamImg1 from "assets/images/team-img-1.png";
+import { ReactComponent as Bottle } from "assets/images/bottle.svg";
 
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 
@@ -11,6 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 
 import SwiperCore, { Navigation } from "swiper";
+import Accordion from "components/Accordion/Accordion";
 SwiperCore.use([Navigation]);
 
 function Home() {
@@ -98,6 +100,109 @@ function Home() {
       </div>
       {/* WELCOME END */}
 
+      {/* ROADMAP STARTS */}
+      <div className="roadmap-wrapper">
+        <div className="container-wrapper">
+          <div className="roadmap py-100px">
+            <p className="text-center dark-blue fs-96px weight-7 teko ">
+              Road Map
+            </p>
+            <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-100px">
+              Our commitment as a team to this project is one that is beyond a
+              successful token sale, but towards building a product that our
+              community loves, enjoys and also benefits from.
+            </p>
+
+            <div className="roadmap-content-wrapper">
+              <div
+                className="roadmap-content"
+                // style={{ border: "2px solid red" }}
+              >
+                <div className="roadmap-box bot">
+                  <div className="bottle">
+                    <div className="milk"></div>
+                    <Bottle />
+                  </div>
+                </div>
+                <div className="roadmap-box">
+                  <div className="roadmap-box-content left">
+                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
+                      10% - Welcome{" "}
+                    </p>
+                    <p className="fs-18px dark-blue lh-26px weight-5">
+                      To sell your NFTs on a marketplace, you’ll need to locate
+                      them in your collection, click on them and find the “sell”
+                      button.
+                    </p>
+                  </div>
+                </div>
+                <div className="roadmap-box">
+                  <div className="roadmap-box-content right">
+                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
+                      10% - Welcome{" "}
+                    </p>
+                    <p className="fs-18px dark-blue lh-26px weight-5">
+                      To sell your NFTs on a marketplace, you’ll need to locate
+                      them in your collection, click on them and find the “sell”
+                      button.
+                    </p>
+                  </div>
+                </div>
+                <div className="roadmap-box">
+                  <div className="roadmap-box-content left">
+                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
+                      10% - Welcome{" "}
+                    </p>
+                    <p className="fs-18px dark-blue lh-26px weight-5">
+                      To sell your NFTs on a marketplace, you’ll need to locate
+                      them in your collection, click on them and find the “sell”
+                      button.
+                    </p>
+                  </div>
+                </div>
+                <div className="roadmap-box">
+                  <div className="roadmap-box-content right">
+                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
+                      10% - Welcome{" "}
+                    </p>
+                    <p className="fs-18px dark-blue lh-26px weight-5">
+                      To sell your NFTs on a marketplace, you’ll need to locate
+                      them in your collection, click on them and find the “sell”
+                      button.
+                    </p>
+                  </div>
+                </div>
+                <div className="roadmap-box">
+                  <div className="roadmap-box-content left">
+                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
+                      10% - Welcome{" "}
+                    </p>
+                    <p className="fs-18px dark-blue lh-26px weight-5">
+                      To sell your NFTs on a marketplace, you’ll need to locate
+                      them in your collection, click on them and find the “sell”
+                      button.
+                    </p>
+                  </div>
+                </div>
+                <div className="roadmap-box">
+                  <div className="roadmap-box-content right">
+                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
+                      10% - Welcome{" "}
+                    </p>
+                    <p className="fs-18px dark-blue lh-26px weight-5">
+                      To sell your NFTs on a marketplace, you’ll need to locate
+                      them in your collection, click on them and find the “sell”
+                      button.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* ROADMAP ENDS */}
+
       {/* OUR TEAM START */}
       <div className="our-team-wrapper">
         <div className="container-wrapper">
@@ -166,13 +271,27 @@ function Home() {
               </Swiper>
             </div>
 
-            <div className="slider-btns">
+            <div className="slider-btns mb-100px">
               <button className="pointer" ref={navigationPrevRef}>
                 <HiArrowNarrowLeft />
               </button>
               <button className="pointer" ref={navigationNextRef}>
                 <HiArrowNarrowRight />
               </button>
+            </div>
+
+            <p className="text-center dark-blue fs-96px weight-7 teko ">FAQ</p>
+            <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-70px">
+              Some of your Frequently Asked Questions
+            </p>
+
+            <div className="accordions">
+              <Accordion />
+              <Accordion />
+              <Accordion />
+              <Accordion />
+              <Accordion />
+              <Accordion />
             </div>
           </div>
         </div>
