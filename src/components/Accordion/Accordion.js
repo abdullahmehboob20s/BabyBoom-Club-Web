@@ -21,7 +21,7 @@ function Accordion() {
           What does NFT Collection Comprise of?
         </p>{" "}
         <div className="acordion-header-icon">
-          {show ? <AiOutlinePlus /> : <BsDashLg />}
+          {show ? <BsDashLg /> : <AiOutlinePlus />}
         </div>
       </div>
       <div

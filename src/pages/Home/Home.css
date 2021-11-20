@@ -61,7 +61,7 @@
 }
 
 .hero-right .row img {
-  width: 300px;
+  width: 200px;
 }
 
 .timer {
@@ -280,6 +280,8 @@
   border-bottom-right-radius: 20px;
 
   border: 2px solid #3f2409;
+
+  transition: all 0.2s ease;
 }
 
 /* ROADMAP ENDS */
