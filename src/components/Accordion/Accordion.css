@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  gap: 2rem;
 }
 
 .accordion-btn p {
@@ -52,4 +53,14 @@
 .accordion-body {
   height: 0;
   transition: all 0.2s ease;
+}
+
+@media (max-width: 400px) {
+  .accordion-btn {
+    padding: 18px 1rem;
+  }
+  .accordion-content {
+    padding: 18px 1rem;
+    padding-top: 0;
+  }
 }

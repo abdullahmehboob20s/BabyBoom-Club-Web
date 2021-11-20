@@ -1,12 +1,67 @@
 .hero-wrapper {
-  height: 100vh;
+  height: 1200px;
   background: url(../../assets/images/hero-bg.png);
   background-position: center center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 
   display: flex;
   align-items: center;
+  padding-left: 5%;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hero-left {
+  /* border: 2px solid red; */
+  padding: 4rem 0;
+}
+
+.hero-left,
+.hero-right {
+  flex: 1;
+}
+
+.hero-right {
+  /* border: 2px solid blue; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  overflow: hidden;
+  margin-right: -50px;
+}
+
+.hero-right .row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hero-right .row:nth-child(1),
+.hero-right .row:nth-child(3) {
+  height: 80%;
+}
+
+.hero-right .row .swiper-container .swiper-wrapper .swiper-slide {
+  /* border: 2px solid red; */
+  height: fit-content;
+}
+.hero-right .row .swiper-container .swiper-wrapper {
+  gap: 1.5rem;
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+  position: relative;
+}
+
+.hero-right .row img {
+  width: 300px;
 }
 
 .timer {
@@ -19,10 +74,16 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  /* border: 2px solid red; */
+  gap: 0.8rem;
 }
 
 .timer-number {
   line-height: 0.8;
+  height: 100px;
+  transition: all 0.2s ease;
+  /* border: 2px solid red; */
+  width: 110px;
 }
 
 .timer-dot {
@@ -39,8 +100,8 @@
 }
 
 .hero-btns button {
-  width: 222px;
-  height: 72px;
+  width: clamp(148px, 15.416666666666666vw, 222px);
+  height: clamp(48px, 5vw, 72px);
 }
 
 /* welcome-wrapper STARTS ============================= */
@@ -65,6 +126,10 @@
 
 .welcome-left img {
   width: 100%;
+}
+
+.welcome-cat-responsive {
+  display: none;
 }
 /* welcome-wrapper ENDS ============================= */
 
@@ -109,10 +174,6 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.roadmap-content-wrapper {
-  /* border: 2px solid red; */
 }
 
 .roadmap-content {
@@ -194,7 +255,6 @@
   z-index: 100000;
 }
 .bottle {
-  /* border: 2px solid red; */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -223,3 +283,227 @@
 }
 
 /* ROADMAP ENDS */
+
+@media (max-width: 1400px) {
+  .roadmap-box-content {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .roadmap-box-content {
+    width: 300px;
+    padding: 25px;
+  }
+
+  .hero-wrapper {
+    height: auto;
+    padding-top: 30px;
+    /* margin-bottom: 100px; */
+  }
+  .hero {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero-left {
+    padding-right: 5rem;
+  }
+
+  .hero-right {
+    margin-right: 0;
+    margin-right: 5%;
+    max-height: 700px;
+  }
+
+  .hero-right .row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .hero-right .row:nth-child(1),
+  .hero-right .row:nth-child(3) {
+    height: 500px !important;
+  }
+
+  .hero-right .row .swiper-container {
+    height: 100%;
+  }
+  .hero-right .row img {
+    width: 100%;
+  }
+
+  .title-effect {
+    display: none;
+  }
+
+  .timer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .time-wrap {
+    /* border: 2px solid red; */
+    gap: 0.1rem;
+  }
+
+  .timer-number {
+    height: 65px;
+    /* border: 2px solid red; */
+    width: 60px;
+  }
+
+  .timer-dot {
+    width: 13px;
+    height: 16px;
+    background-color: var(--pink);
+    margin-bottom: 2rem;
+  }
+
+  .welcome {
+    display: flex;
+    align-items: unset;
+    gap: 0rem;
+    flex-direction: column;
+    justify-content: unset;
+  }
+  .welcome-left,
+  .welcome-right {
+    flex: 1;
+  }
+  .welcome-left img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .welcome-cat-responsive {
+    display: block;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .welcome-right p:nth-child(1) {
+    display: none;
+  }
+
+  .roadmap-content {
+    height: auto;
+    margin-bottom: 100px;
+    width: 100%;
+
+    justify-content: unset;
+    align-items: unset;
+    gap: 1rem;
+  }
+
+  .roadmap-box {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
+
+  .roadmap-box:not(:first-child) {
+    /* border: 2px solid blue; */
+    padding-left: 5rem;
+  }
+
+  .roadmap-box-content {
+    position: static;
+
+    width: 100%;
+    padding: 30px;
+
+    transform: none;
+    z-index: 100000 !important;
+    background: #d0a9e83f;
+  }
+
+  .roadmap-box-content::before {
+    display: none;
+  }
+
+  .roadmap-content::before {
+    left: 30px;
+    transform: none;
+  }
+
+  .bottle {
+    position: absolute;
+    top: 100%;
+    left: 3px;
+    transform: none;
+
+    width: 57.39px;
+    height: 148px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-left {
+    text-align: center;
+    padding-right: 7%;
+
+    align-items: center;
+  }
+
+  .timer {
+    justify-content: center;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero {
+    gap: 0;
+  }
+
+  .hero-right {
+    max-height: 300px;
+  }
+
+  .hero-right .row {
+    gap: 1rem;
+  }
+
+  .hero-right .row:nth-child(1),
+  .hero-right .row:nth-child(3) {
+    height: 250px !important;
+  }
+
+  .roadmap-box-content {
+    padding: 30px 18px;
+    border-radius: 24px;
+  }
+
+  /*  */
+  /*  */
+  /*  */
+
+  .roadmap-box {
+    width: 100%;
+    height: auto;
+    border-radius: 0px;
+  }
+
+  .roadmap-box:not(:first-child) {
+    /* border: 2px solid blue; */
+    padding-left: 3rem;
+  }
+
+  .roadmap-content::before {
+    left: 10px;
+    transform: none;
+  }
+
+  .bottle {
+    width: 45px;
+    height: 135px;
+    left: -10px;
+  }
+
+  .bottle svg {
+    width: 100%;
+  }
+}

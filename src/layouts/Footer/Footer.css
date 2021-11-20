@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 88px;
+  gap: clamp(24px, 6.111111111111111vw, 88px);
 }
 .verified {
   display: flex;

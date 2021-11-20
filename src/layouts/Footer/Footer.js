@@ -12,8 +12,13 @@ function Footer() {
     <div className="footer-wrapper">
       <div className="container-wrapper py-100px">
         <div className="footer">
-          <div className="text-center mb-40px">
-            <Logo />
+          <div className="mb-40px">
+            <div
+              className="text-center  margin-center"
+              style={{ width: "278.1px" }}
+            >
+              <Logo />
+            </div>
           </div>
           <p className="text-center fs-96px dark-blue weight-6 teko mb-30px">
             Join The Community
