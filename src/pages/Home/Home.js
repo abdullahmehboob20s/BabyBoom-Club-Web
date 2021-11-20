@@ -18,6 +18,7 @@ import SwiperCore, { Navigation, Autoplay } from "swiper";
 import Accordion from "components/Accordion/Accordion";
 import Navbar from "layouts/Navbar/Navbar";
 import Roadmap from "layouts/Roadmap/Roadmap";
+import { Link } from "react-scroll";
 
 SwiperCore.use([Autoplay, Navigation]);
 
@@ -53,7 +54,7 @@ function Home() {
     <div>
       <Navbar />
       {/* HERO STARTS */}
-      <div className="hero-wrapper mb-100px">
+      <div className="hero-wrapper mb-100px" id="home">
         <div className="hero">
           <div className="hero-left">
             <p className=" teko fs-96px weight-7 lh-90px dark-blue mb-25px">
@@ -204,7 +205,7 @@ function Home() {
       {/* HERO ENDS */}
 
       {/* WELCOME STARTS */}
-      <div className="welcome-wrapper ">
+      <div className="welcome-wrapper " id="about">
         <div className="container-wrapper">
           <div className="welcome py-200px">
             <p className=" w-full teko fs-96px weight-7 lh-90px dark-blue mb-40px welcome-cat-responsive">
@@ -242,124 +243,132 @@ function Home() {
       {/* WELCOME END */}
 
       {/* ROADMAP STARTS */}
-      <Roadmap />
+      <div id="roadmap">
+        <Roadmap />
+      </div>
       {/* ROADMAP ENDS */}
 
       {/* OUR TEAM START */}
       <div className="our-team-wrapper">
         <div className="container-wrapper">
           <div className="our-team py-100px">
-            <p className=" text-center dark-blue fs-96px weight-7   ">
-              <span className="title-effect-wrapper teko">
-                Our Team
-                <div className="title-effect teko">Our Team</div>
-              </span>
-            </p>
+            <div className="team" id="team">
+              <p className=" text-center dark-blue fs-96px weight-7   ">
+                <span className="title-effect-wrapper teko">
+                  Our Team
+                  <div className="title-effect teko">Our Team</div>
+                </span>
+              </p>
 
-            <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-70px">
-              Our commitment as a team to this project is one that is beyond a
-              successful token sale, but towards building a product that our
-              community loves, enjoys and also benefits from.
-            </p>
+              <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-70px">
+                Our commitment as a team to this project is one that is beyond a
+                successful token sale, but towards building a product that our
+                community loves, enjoys and also benefits from.
+              </p>
 
-            <div className="team-cards mb-70px">
-              <Swiper
-                slidesPerView={4}
-                spaceBetween={60}
-                onSwiper={(swiper) => {
-                  setTimeout(() => {
-                    swiper.params.navigation.prevEl = navigationPrevRef.current;
-                    swiper.params.navigation.nextEl = navigationNextRef.current;
-                    swiper.navigation.destroy();
-                    swiper.navigation.init();
-                    swiper.navigation.update();
-                  });
-                }}
-                navigation={{
-                  prevEl: navigationPrevRef.current,
-                  nextEl: navigationNextRef.current,
-                }}
-                breakpoints={{
-                  1200: {
-                    slidesPerView: 4,
-                    spaceBetween: 60,
-                  },
-                  1000: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                  },
-                  700: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                  },
-                  500: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                  },
-                  350: {
-                    slidesPerView: 1.5,
-                    spaceBetween: 20,
-                  },
-                  250: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                  },
-                }}
-              >
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <TeamCards img={teamImg1} />
-                </SwiperSlide>
-              </Swiper>
+              <div className="team-cards mb-70px">
+                <Swiper
+                  slidesPerView={4}
+                  spaceBetween={60}
+                  onSwiper={(swiper) => {
+                    setTimeout(() => {
+                      swiper.params.navigation.prevEl =
+                        navigationPrevRef.current;
+                      swiper.params.navigation.nextEl =
+                        navigationNextRef.current;
+                      swiper.navigation.destroy();
+                      swiper.navigation.init();
+                      swiper.navigation.update();
+                    });
+                  }}
+                  navigation={{
+                    prevEl: navigationPrevRef.current,
+                    nextEl: navigationNextRef.current,
+                  }}
+                  breakpoints={{
+                    1200: {
+                      slidesPerView: 4,
+                      spaceBetween: 60,
+                    },
+                    1000: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
+                    700: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
+                    500: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    350: {
+                      slidesPerView: 1.5,
+                      spaceBetween: 20,
+                    },
+                    250: {
+                      slidesPerView: 1,
+                      spaceBetween: 20,
+                    },
+                  }}
+                >
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <TeamCards img={teamImg1} />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+
+              <div className="slider-btns mb-100px">
+                <button className="pointer" ref={navigationPrevRef}>
+                  <HiArrowNarrowLeft />
+                </button>
+                <button className="pointer" ref={navigationNextRef}>
+                  <HiArrowNarrowRight />
+                </button>
+              </div>
             </div>
 
-            <div className="slider-btns mb-100px">
-              <button className="pointer" ref={navigationPrevRef}>
-                <HiArrowNarrowLeft />
-              </button>
-              <button className="pointer" ref={navigationNextRef}>
-                <HiArrowNarrowRight />
-              </button>
-            </div>
+            <div className="faq" id="faq">
+              <p className=" text-center dark-blue fs-96px weight-7   ">
+                <span className="title-effect-wrapper teko">
+                  FAQ
+                  <div className="title-effect teko">FAQs</div>
+                </span>
+              </p>
 
-            <p className=" text-center dark-blue fs-96px weight-7   ">
-              <span className="title-effect-wrapper teko">
-                FAQ
-                <div className="title-effect teko">FAQs</div>
-              </span>
-            </p>
+              <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-70px">
+                Some of your Frequently Asked Questions
+              </p>
 
-            <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-70px">
-              Some of your Frequently Asked Questions
-            </p>
-
-            <div className="accordions">
-              <Accordion />
-              <Accordion />
-              <Accordion />
-              <Accordion />
-              <Accordion />
-              <Accordion />
+              <div className="accordions">
+                <Accordion />
+                <Accordion />
+                <Accordion />
+                <Accordion />
+                <Accordion />
+                <Accordion />
+              </div>
             </div>
           </div>
         </div>

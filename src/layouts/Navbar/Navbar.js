@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import hamburger from "assets/images/hamburger.png";
 import crossIcon from "assets/images/cross-icon.png";
+import { Link as ScrollLink } from "react-scroll";
 
 function Navbar() {
   const [scrolled, setScrolled] = React.useState(false);
@@ -47,21 +48,37 @@ function Navbar() {
                 src={crossIcon}
                 alt=""
               />
-              <Link to="/" className="fs-16px dark-blue weight-4 montserrat">
+              <ScrollLink
+                to="home"
+                className="pointer fs-16px dark-blue weight-4 montserrat"
+              >
                 Home
-              </Link>
-              <Link to="/" className="fs-16px dark-blue weight-4 montserrat">
+              </ScrollLink>
+              <ScrollLink
+                to="about"
+                offset={80}
+                className="pointer fs-16px dark-blue weight-4 montserrat"
+              >
                 About
-              </Link>
-              <Link to="/" className="fs-16px dark-blue weight-4 montserrat">
+              </ScrollLink>
+              <ScrollLink
+                to="roadmap"
+                className="pointer fs-16px dark-blue weight-4 montserrat"
+              >
                 Road Map
-              </Link>
-              <Link to="/" className="fs-16px dark-blue weight-4 montserrat">
+              </ScrollLink>
+              <ScrollLink
+                to="team"
+                className="pointer fs-16px dark-blue weight-4 montserrat"
+              >
                 Team
-              </Link>
-              <Link to="/" className="fs-16px dark-blue weight-4 montserrat">
+              </ScrollLink>
+              <ScrollLink
+                to="faq"
+                className="pointer fs-16px dark-blue weight-4 montserrat"
+              >
                 FAQ
-              </Link>
+              </ScrollLink>
             </div>
             <Link
               to="/"
