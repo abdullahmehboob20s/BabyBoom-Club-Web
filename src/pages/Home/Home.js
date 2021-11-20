@@ -4,10 +4,10 @@ import welcomeImg from "assets/images/welcome-img.png";
 import Footer from "layouts/Footer/Footer";
 import TeamCards from "components/Cards/TeamCards/TeamCards";
 import teamImg1 from "assets/images/team-img-1.png";
-import { ReactComponent as Bottle } from "assets/images/bottle.svg";
 import img1 from "assets/images/1.png";
 import img2 from "assets/images/2.png";
 import img3 from "assets/images/3.png";
+import { IoIosArrowDown } from "react-icons/io";
 
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 
@@ -17,22 +17,13 @@ import "swiper/swiper-bundle.css";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import Accordion from "components/Accordion/Accordion";
 import Navbar from "layouts/Navbar/Navbar";
+import Roadmap from "layouts/Roadmap/Roadmap";
 
 SwiperCore.use([Autoplay, Navigation]);
 
 function Home() {
   let navigationPrevRef = React.useRef(null);
   let navigationNextRef = React.useRef(null);
-  let milkRef = React.useRef();
-  let bottle = React.useRef();
-  let lineRef = React.useRef();
-
-  let box = React.useRef();
-  let box2 = React.useRef();
-  let box3 = React.useRef();
-  let box4 = React.useRef();
-  let box5 = React.useRef();
-  let box6 = React.useRef();
 
   let [timer, setTimer] = React.useState({
     hours: 0,
@@ -57,46 +48,6 @@ function Home() {
       clearInterval(handler);
     };
   });
-
-  React.useEffect(() => {
-    document.addEventListener("scroll", () => {
-      const lineTop = lineRef.current.getBoundingClientRect().top;
-      const bottleTop = bottle.current.getBoundingClientRect().top;
-      const boxTop = box.current.getBoundingClientRect().top;
-      const box2Top = box2.current.getBoundingClientRect().top;
-      const box3Top = box3.current.getBoundingClientRect().top;
-      const box4Top = box4.current.getBoundingClientRect().top;
-      const box5Top = box5.current.getBoundingClientRect().top;
-      const box6Top = box6.current.getBoundingClientRect().top;
-
-      if (bottleTop > boxTop) {
-        milkRef.current.style.height = "20px";
-      } else {
-        box.current.style.backgroundColor = "transparent";
-        milkRef.current.style.height = "10px";
-      }
-
-      if (bottleTop > box2Top) {
-        milkRef.current.style.height = "30px";
-      }
-
-      if (bottleTop > box3Top) {
-        milkRef.current.style.height = "40px";
-      }
-
-      if (bottleTop > box4Top) {
-        milkRef.current.style.height = "50px";
-      }
-
-      if (bottleTop > box5Top) {
-        milkRef.current.style.height = "80px";
-      }
-
-      if (bottleTop > box6Top) {
-        milkRef.current.style.height = "90px";
-      }
-    });
-  }, []);
 
   return (
     <div>
@@ -145,6 +96,18 @@ function Home() {
                 <span className="fs-30px weight-6 dark-blue">SEC</span>
               </div>
             </div>
+            {/* 
+            <div className="hero-input mb-40px">
+              <div className="hero-dropdown fs-24px light-gray">
+                Select Image Quantity{" "}
+                <span className="arrow">
+                  <IoIosArrowDown />
+                </span>
+              </div>
+              <div className="input-btn teko black fs-28px button-wrapper">
+                Buy on $16 ETH
+              </div>
+            </div> */}
 
             <div className="hero-btns">
               <button className="teko black fs-28px weight-5 pointer radius-12px bg-pink">
@@ -279,109 +242,7 @@ function Home() {
       {/* WELCOME END */}
 
       {/* ROADMAP STARTS */}
-      <div className="roadmap-wrapper">
-        <div className="container-wrapper">
-          <div className="roadmap py-100px">
-            <p className=" text-center dark-blue fs-96px weight-7   ">
-              <span className="title-effect-wrapper teko">
-                Road Map
-                <div className="title-effect teko">Road Map</div>
-              </span>
-            </p>
-            <p className="text-center dark-blue fs-22px weight-4 lh-36px mb-100px">
-              Our commitment as a team to this project is one that is beyond a
-              successful token sale, but towards building a product that our
-              community loves, enjoys and also benefits from.
-            </p>
-
-            <div className="roadmap-content-wrapper">
-              <div className="roadmap-content" ref={lineRef}>
-                <div className="roadmap-box bot" ref={bottle}>
-                  <div className="bottle">
-                    <div className="milk" ref={milkRef}></div>
-                    <div className="svg">
-                      <Bottle />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="roadmap-box" ref={box}>
-                  <div className="roadmap-box-content left">
-                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                      10% - Welcome{" "}
-                    </p>
-                    <p className="fs-18px dark-blue lh-26px weight-5">
-                      To sell your NFTs on a marketplace, you’ll need to locate
-                      them in your collection, click on them and find the “sell”
-                      button.
-                    </p>
-                  </div>
-                </div>
-                <div className="roadmap-box" ref={box2}>
-                  <div className="roadmap-box-content right">
-                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                      10% - Welcome{" "}
-                    </p>
-                    <p className="fs-18px dark-blue lh-26px weight-5">
-                      To sell your NFTs on a marketplace, you’ll need to locate
-                      them in your collection, click on them and find the “sell”
-                      button.
-                    </p>
-                  </div>
-                </div>
-                <div className="roadmap-box" ref={box3}>
-                  <div className="roadmap-box-content left">
-                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                      10% - Welcome{" "}
-                    </p>
-                    <p className="fs-18px dark-blue lh-26px weight-5">
-                      To sell your NFTs on a marketplace, you’ll need to locate
-                      them in your collection, click on them and find the “sell”
-                      button.
-                    </p>
-                  </div>
-                </div>
-                <div className="roadmap-box" ref={box4}>
-                  <div className="roadmap-box-content right">
-                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                      10% - Welcome{" "}
-                    </p>
-                    <p className="fs-18px dark-blue lh-26px weight-5">
-                      To sell your NFTs on a marketplace, you’ll need to locate
-                      them in your collection, click on them and find the “sell”
-                      button.
-                    </p>
-                  </div>
-                </div>
-                <div className="roadmap-box" ref={box5}>
-                  <div className="roadmap-box-content left">
-                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                      10% - Welcome{" "}
-                    </p>
-                    <p className="fs-18px dark-blue lh-26px weight-5">
-                      To sell your NFTs on a marketplace, you’ll need to locate
-                      them in your collection, click on them and find the “sell”
-                      button.
-                    </p>
-                  </div>
-                </div>
-                <div className="roadmap-box" ref={box6}>
-                  <div className="roadmap-box-content right">
-                    <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                      10% - Welcome{" "}
-                    </p>
-                    <p className="fs-18px dark-blue lh-26px weight-5">
-                      To sell your NFTs on a marketplace, you’ll need to locate
-                      them in your collection, click on them and find the “sell”
-                      button.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Roadmap />
       {/* ROADMAP ENDS */}
 
       {/* OUR TEAM START */}

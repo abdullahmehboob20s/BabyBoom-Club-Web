@@ -40,6 +40,7 @@
   /* colors */
   --black: #000000;
   --dark-blue: #04060f;
+  --light-gray: #9d9aa7;
   --gray: #454545;
   --pink: #fe9ec4;
 }
@@ -102,6 +103,9 @@
 }
 .gray {
   color: var(--gray);
+}
+.light-gray {
+  color: var(--light-gray);
 }
 .pink {
   color: var(--pink);
@@ -235,6 +239,11 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+.button-wrapper {
+  width: clamp(148px, 15.416666666666666vw, 222px);
+  height: clamp(48px, 5vw, 72px);
 }
 
 .title-effect-wrapper {
