@@ -131,7 +131,7 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 1,
+                delay: 100,
                 reverseDirection: true,
                 disableOnInteraction: false,
               }}
