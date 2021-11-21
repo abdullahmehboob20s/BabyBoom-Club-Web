@@ -313,28 +313,61 @@ function Home() {
                   }}
                 >
                   <SwiperSlide>
-                    <TeamCards img={teamImg1} />
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Dwane_John"
+                      subtitle="the leader"
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <TeamCards img={teamImg1} />
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Maria_sen"
+                      subtitle="Senior Programmer"
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <TeamCards img={teamImg1} />
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Seth_rollins"
+                      subtitle="Marketing Genius"
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <TeamCards img={teamImg1} />
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Roman_reigns"
+                      subtitle="Art Director"
+                    />
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Dwane_John"
+                      subtitle="the leader"
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <TeamCards img={teamImg1} />
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Maria_sen"
+                      subtitle="Senior Programmer"
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <TeamCards img={teamImg1} />
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Seth_rollins"
+                      subtitle="Marketing Genius"
+                    />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <TeamCards img={teamImg1} />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <TeamCards img={teamImg1} />
+                    <TeamCards
+                      img={teamImg1}
+                      title="@Roman_reigns"
+                      subtitle="Art Director"
+                    />
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -362,12 +395,12 @@ function Home() {
               </p>
 
               <div className="accordions">
-                <Accordion />
-                <Accordion />
-                <Accordion />
-                <Accordion />
-                <Accordion />
-                <Accordion />
+                <Accordion title="What does NFT Collection Comprise of?" />
+                <Accordion title="How to get our NFT?" />
+                <Accordion title="How much does our NFT cost?" />
+                <Accordion title="Will you list your NFT on OpenSea?" />
+                <Accordion title="What is a Rarity NFT?" />
+                <Accordion title="What is a Rarity NFT?" />
               </div>
             </div>
           </div>

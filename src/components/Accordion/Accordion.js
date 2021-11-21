@@ -3,7 +3,7 @@ import "./Accordion.css";
 import { BsDashLg } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 
-function Accordion() {
+function Accordion({ title }) {
   const [show, setShow] = React.useState(false);
   const accordionBody = React.useRef("");
 
@@ -17,9 +17,7 @@ function Accordion() {
         className={`accordion-btn ${show ? "active" : ""}`}
         onClick={handler}
       >
-        <p className=" teko fs-30px weight-4">
-          What does NFT Collection Comprise of?
-        </p>{" "}
+        <p className=" teko fs-30px weight-4">{title}</p>{" "}
         <div className="acordion-header-icon">
           {show ? <BsDashLg /> : <AiOutlinePlus />}
         </div>
