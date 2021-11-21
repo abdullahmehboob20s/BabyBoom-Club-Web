@@ -4,6 +4,9 @@ import welcomeImg from "assets/images/welcome-img.png";
 import Footer from "layouts/Footer/Footer";
 import TeamCards from "components/Cards/TeamCards/TeamCards";
 import teamImg1 from "assets/images/team-img-1.png";
+import teamImg2 from "assets/images/team-img-2.png";
+import teamImg3 from "assets/images/team-img-3.png";
+import teamImg4 from "assets/images/team-img-4.png";
 import img1 from "assets/images/1.png";
 import img2 from "assets/images/2.png";
 import img3 from "assets/images/3.png";
@@ -128,12 +131,15 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 0,
+                delay: 1,
                 reverseDirection: true,
                 disableOnInteraction: false,
               }}
               slidesPerView="auto"
               loopedSlides={3}
+              grabCursor={true}
+              mousewheelControl={true}
+              keyboardControl={true}
             >
               <SwiperSlide>
                 <img src={img1} alt="" />
@@ -321,26 +327,25 @@ function Home() {
                   </SwiperSlide>
                   <SwiperSlide>
                     <TeamCards
-                      img={teamImg1}
+                      img={teamImg2}
                       title="@Maria_sen"
                       subtitle="Senior Programmer"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <TeamCards
-                      img={teamImg1}
+                      img={teamImg3}
                       title="@Seth_rollins"
                       subtitle="Marketing Genius"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <TeamCards
-                      img={teamImg1}
+                      img={teamImg4}
                       title="@Roman_reigns"
                       subtitle="Art Director"
                     />
                   </SwiperSlide>
-
                   <SwiperSlide>
                     <TeamCards
                       img={teamImg1}
@@ -350,21 +355,21 @@ function Home() {
                   </SwiperSlide>
                   <SwiperSlide>
                     <TeamCards
-                      img={teamImg1}
+                      img={teamImg2}
                       title="@Maria_sen"
                       subtitle="Senior Programmer"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <TeamCards
-                      img={teamImg1}
+                      img={teamImg3}
                       title="@Seth_rollins"
                       subtitle="Marketing Genius"
                     />
                   </SwiperSlide>
                   <SwiperSlide>
                     <TeamCards
-                      img={teamImg1}
+                      img={teamImg4}
                       title="@Roman_reigns"
                       subtitle="Art Director"
                     />
