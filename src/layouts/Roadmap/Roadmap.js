@@ -99,7 +99,7 @@ function Roadmap() {
               <div className="roadmap-box" ref={box2}>
                 <div className="roadmap-box-content right">
                   <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                    10% - Welcome{" "}
+                    30% - ENTRANCE OF CAVIAR
                   </p>
                   <p className="fs-18px dark-blue lh-26px weight-5">
                     To sell your NFTs on a marketplace, you’ll need to locate
@@ -111,7 +111,7 @@ function Roadmap() {
               <div className="roadmap-box" ref={box3}>
                 <div className="roadmap-box-content left">
                   <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                    10% - Welcome{" "}
+                    50% - DRIPPY
                   </p>
                   <p className="fs-18px dark-blue lh-26px weight-5">
                     To sell your NFTs on a marketplace, you’ll need to locate
@@ -123,7 +123,7 @@ function Roadmap() {
               <div className="roadmap-box" ref={box4}>
                 <div className="roadmap-box-content right">
                   <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                    10% - Welcome{" "}
+                    70% - Burning
                   </p>
                   <p className="fs-18px dark-blue lh-26px weight-5">
                     To sell your NFTs on a marketplace, you’ll need to locate
@@ -135,7 +135,7 @@ function Roadmap() {
               <div className="roadmap-box" ref={box5}>
                 <div className="roadmap-box-content left">
                   <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                    10% - Welcome{" "}
+                    90% - TO THE MOON!
                   </p>
                   <p className="fs-18px dark-blue lh-26px weight-5">
                     To sell your NFTs on a marketplace, you’ll need to locate
@@ -147,7 +147,7 @@ function Roadmap() {
               <div className="roadmap-box" ref={box6}>
                 <div className="roadmap-box-content right">
                   <p className="fs-48px teko pink weight-7 lh-42px mb-10px">
-                    10% - Welcome{" "}
+                    100% - BREEDING
                   </p>
                   <p className="fs-18px dark-blue lh-26px weight-5">
                     To sell your NFTs on a marketplace, you’ll need to locate

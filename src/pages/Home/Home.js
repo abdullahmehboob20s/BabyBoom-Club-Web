@@ -8,6 +8,7 @@ import img1 from "assets/images/1.png";
 import img2 from "assets/images/2.png";
 import img3 from "assets/images/3.png";
 import { IoIosArrowDown } from "react-icons/io";
+import moonImg from "assets/images/moon.png";
 
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 
@@ -248,6 +249,7 @@ function Home() {
 
       {/* OUR TEAM START */}
       <div className="our-team-wrapper">
+        <img src={moonImg} className="moon" alt="" />
         <div className="container-wrapper">
           <div className="our-team py-100px">
             <div className="team" id="team">

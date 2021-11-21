@@ -255,6 +255,15 @@
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.moon {
+  position: absolute;
+  top: -150px;
+  left: 20px;
+  width: clamp(137px, 20.833333333333332vw, 300px);
+  /* transform: translateY(50%); */
 }
 
 .slider-btns {
@@ -455,6 +464,14 @@
 }
 
 @media (max-width: 1000px) {
+  .moon {
+    top: -100px;
+  }
+
+  .roadmap {
+    padding-bottom: 180px;
+  }
+
   .roadmap-box-content {
     width: 300px;
     padding: 25px;
@@ -749,5 +766,17 @@
 
   .milk {
     max-height: 60px;
+  }
+
+  .roadmap {
+    padding-bottom: 150px;
+  }
+
+  .moon {
+    top: -80px;
+  }
+
+  .our-team-wrapper {
+    padding-top: 30px;
   }
 }
