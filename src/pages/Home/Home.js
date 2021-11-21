@@ -11,14 +11,14 @@ import { IoIosArrowDown } from "react-icons/io";
 
 import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-
-import SwiperCore, { Navigation, Autoplay } from "swiper";
 import Accordion from "components/Accordion/Accordion";
 import Navbar from "layouts/Navbar/Navbar";
 import Roadmap from "layouts/Roadmap/Roadmap";
 import { Link } from "react-scroll";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Navigation, Autoplay } from "swiper";
+import "swiper/swiper-bundle.css";
 
 SwiperCore.use([Autoplay, Navigation]);
 
@@ -120,85 +120,83 @@ function Home() {
             </div>
           </div>
           <div className="hero-right">
-            <div className="row">
-              <Swiper
-                direction="vertical"
-                slidesPerView="auto"
-                spaceBetween={0}
-                centeredSlides={true}
-                loop={true}
-                speed={4000}
-                autoplay={{
-                  delay: 0,
-                }}
-                // allowTouchMove={false}
-                disableOnInteraction={true}
-              >
-                <SwiperSlide>
-                  <img src={img1} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img2} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img3} alt="" />
-                </SwiperSlide>
-              </Swiper>
-            </div>
-            <div className="row">
-              <Swiper
-                direction="vertical"
-                slidesPerView="auto"
-                spaceBetween={0}
-                centeredSlides={true}
-                loop={true}
-                speed={4000}
-                autoplay={{
-                  delay: 0,
-                  reverseDirection: true,
-                }}
-                // allowTouchMove={false}
-                disableOnInteraction={true}
-              >
-                <SwiperSlide>
-                  <img src={img1} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img2} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img3} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img3} alt="" />
-                </SwiperSlide>
-              </Swiper>
-            </div>
-            <div className="row">
-              <Swiper
-                direction="vertical"
-                slidesPerView="auto"
-                spaceBetween={0}
-                centeredSlides={true}
-                loop={true}
-                speed={4000}
-                autoplay={{
-                  delay: 0,
-                }}
-                // allowTouchMove={false}
-                disableOnInteraction={true}
-              >
-                <SwiperSlide>
-                  <img src={img1} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img2} alt="" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src={img3} alt="" />
-                </SwiperSlide>
-              </Swiper>
-            </div>
+            <Swiper
+              direction="vertical"
+              spaceBetween={20}
+              centeredSlides={true}
+              loop={true}
+              speed={4000}
+              autoplay={{
+                delay: 0,
+                reverseDirection: true,
+                disableOnInteraction: false,
+              }}
+              slidesPerView="auto"
+              loopedSlides={3}
+            >
+              <SwiperSlide>
+                <img src={img1} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img3} alt="" />
+              </SwiperSlide>
+            </Swiper>
+            <Swiper
+              direction="vertical"
+              slidesPerView="auto"
+              spaceBetween={20}
+              centeredSlides={true}
+              loop={true}
+              speed={4000}
+              autoplay={{
+                delay: 0,
+              }}
+              // allowTouchMove={false}
+              disableOnInteraction={true}
+              loopedSlides={4}
+            >
+              <SwiperSlide>
+                <img src={img1} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img3} alt="" />
+              </SwiperSlide>
+            </Swiper>
+            <Swiper
+              direction="vertical"
+              slidesPerView="auto"
+              spaceBetween={20}
+              centeredSlides={true}
+              loop={true}
+              speed={4000}
+              autoplay={{
+                delay: 0,
+                disableOnInteraction: false,
+                reverseDirection: true,
+              }}
+              // allowTouchMove={false}
+              disableOnInteraction={true}
+              loopedSlides={3}
+            >
+              <SwiperSlide>
+                <img src={img1} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img3} alt="" />
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
       </div>

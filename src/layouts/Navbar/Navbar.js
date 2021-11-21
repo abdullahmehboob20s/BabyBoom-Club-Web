@@ -70,11 +70,13 @@ function Navbar() {
               <ScrollLink
                 to="team"
                 className="pointer fs-16px dark-blue weight-4 montserrat"
+                offset={-100}
               >
                 Team
               </ScrollLink>
               <ScrollLink
                 to="faq"
+                offset={-100}
                 className="pointer fs-16px dark-blue weight-4 montserrat"
               >
                 FAQ
