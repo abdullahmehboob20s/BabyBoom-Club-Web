@@ -137,6 +137,9 @@ function Home() {
               loopedSlides={5}
               grabCursor={true}
               slidesPerView="auto"
+              onInit={(swiper) => {
+                swiper.autoplay.start();
+              }}
             >
               <SwiperSlide>
                 <img src={img1} alt="" />
