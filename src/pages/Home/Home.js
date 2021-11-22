@@ -140,6 +140,9 @@ function Home() {
               onInit={(swiper) => {
                 swiper.autoplay.start();
               }}
+              init={(swiper) => {
+                swiper.autoplay.run();
+              }}
             >
               <SwiperSlide>
                 <img src={img1} alt="" />
