@@ -10,6 +10,12 @@ import teamImg4 from "assets/images/team-img-4.png";
 import img1 from "assets/images/1.png";
 import img2 from "assets/images/2.png";
 import img3 from "assets/images/3.png";
+import img4 from "assets/images/4.png";
+import img5 from "assets/images/5.png";
+import img6 from "assets/images/6.png";
+import img8 from "assets/images/8.png";
+import img9 from "assets/images/9.png";
+import img10 from "assets/images/10.png";
 import { IoIosArrowDown } from "react-icons/io";
 import moonImg from "assets/images/moon.png";
 
@@ -167,16 +173,16 @@ function Home() {
               loopedSlides={6}
             >
               <SwiperSlide>
-                <img src={img1} alt="" />
+                <img src={img4} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={img2} alt="" />
+                <img src={img5} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={img3} alt="" />
+                <img src={img6} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={img3} alt="" />
+                <img src={img5} alt="" />
               </SwiperSlide>
             </Swiper>
             <Swiper
@@ -196,13 +202,13 @@ function Home() {
               loopedSlides={3}
             >
               <SwiperSlide>
-                <img src={img1} alt="" />
+                <img src={img8} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={img2} alt="" />
+                <img src={img9} alt="" />
               </SwiperSlide>
               <SwiperSlide>
-                <img src={img3} alt="" />
+                <img src={img10} alt="" />
               </SwiperSlide>
             </Swiper>
           </div>
