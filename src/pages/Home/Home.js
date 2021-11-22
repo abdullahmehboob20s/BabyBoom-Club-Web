@@ -18,7 +18,6 @@ import { HiArrowNarrowRight, HiArrowNarrowLeft } from "react-icons/hi";
 import Accordion from "components/Accordion/Accordion";
 import Navbar from "layouts/Navbar/Navbar";
 import Roadmap from "layouts/Roadmap/Roadmap";
-import { Link } from "react-scroll";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
@@ -52,7 +51,7 @@ function Home() {
     return () => {
       clearInterval(handler);
     };
-  });
+  }, []);
 
   return (
     <div>
@@ -135,35 +134,12 @@ function Home() {
                 reverseDirection: true,
                 disableOnInteraction: false,
               }}
-              slidesPerView="auto"
-              loopedSlides={3}
+              loopedSlides={5}
               grabCursor={true}
-              mousewheelControl={true}
-              keyboardControl={true}
-            >
-              <SwiperSlide>
-                <img src={img1} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={img2} alt="" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src={img3} alt="" />
-              </SwiperSlide>
-            </Swiper>
-            <Swiper
-              direction="vertical"
               slidesPerView="auto"
-              spaceBetween={20}
-              centeredSlides={true}
-              loop={true}
-              speed={4000}
-              autoplay={{
-                delay: 0,
+              onInit={(swiper) => {
+                console.log(swiper);
               }}
-              // allowTouchMove={false}
-              disableOnInteraction={true}
-              loopedSlides={4}
             >
               <SwiperSlide>
                 <img src={img1} alt="" />
@@ -174,23 +150,48 @@ function Home() {
               <SwiperSlide>
                 <img src={img3} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
-                <img src={img3} alt="" />
-              </SwiperSlide>
             </Swiper>
             <Swiper
               direction="vertical"
               slidesPerView="auto"
+              grabCursor={true}
               spaceBetween={20}
               centeredSlides={true}
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 0,
+                delay: 100,
                 disableOnInteraction: false,
-                reverseDirection: true,
               }}
-              // allowTouchMove={false}
+              disableOnInteraction={true}
+              loopedSlides={6}
+            >
+              <SwiperSlide>
+                <img src={img1} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img2} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img3} alt="" />
+              </SwiperSlide>
+              <SwiperSlide>
+                <img src={img3} alt="" />
+              </SwiperSlide>
+            </Swiper>
+            <Swiper
+              direction="vertical"
+              slidesPerView="auto"
+              grabCursor={true}
+              spaceBetween={20}
+              centeredSlides={true}
+              loop={true}
+              speed={4000}
+              autoplay={{
+                delay: 100,
+                reverseDirection: true,
+                disableOnInteraction: false,
+              }}
               disableOnInteraction={true}
               loopedSlides={3}
             >

@@ -82,11 +82,22 @@
 .hero-right .row:nth-child(3) {
   height: 80%;
 }
-.hero-right .swiper-container .swiper-wrapper {
+.hero-right .swiper-container {
   -webkit-transition-timing-function: linear !important;
   -o-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
   position: relative;
+  animation-play-state: running;
+}
+.hero-right .swiper-container .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+  transition-delay: 0;
+  transition-property: all;
+
+  position: relative;
+  visibility: visible;
 }
 
 .hero-right .swiper-container:nth-child(1),

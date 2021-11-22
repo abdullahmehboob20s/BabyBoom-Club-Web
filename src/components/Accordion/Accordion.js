@@ -5,7 +5,7 @@ import { AiOutlinePlus } from "react-icons/ai";
 
 function Accordion({ title }) {
   const [show, setShow] = React.useState(false);
-  const accordionBody = React.useRef("");
+  const accordionBody = React.useRef();
 
   const handler = () => {
     setShow(!show);
