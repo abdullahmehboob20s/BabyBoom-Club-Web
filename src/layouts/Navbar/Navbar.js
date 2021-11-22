@@ -51,6 +51,7 @@ function Navbar() {
               <ScrollLink
                 to="home"
                 className="pointer fs-16px dark-blue weight-4 montserrat"
+                onClick={() => setShow(false)}
               >
                 Home
               </ScrollLink>
@@ -58,18 +59,21 @@ function Navbar() {
                 to="about"
                 offset={80}
                 className="pointer fs-16px dark-blue weight-4 montserrat"
+                onClick={() => setShow(false)}
               >
                 About
               </ScrollLink>
               <ScrollLink
                 to="roadmap"
                 className="pointer fs-16px dark-blue weight-4 montserrat"
+                onClick={() => setShow(false)}
               >
                 Road Map
               </ScrollLink>
               <ScrollLink
                 to="team"
                 className="pointer fs-16px dark-blue weight-4 montserrat"
+                onClick={() => setShow(false)}
                 offset={-100}
               >
                 Team
@@ -78,6 +82,7 @@ function Navbar() {
                 to="faq"
                 offset={-100}
                 className="pointer fs-16px dark-blue weight-4 montserrat"
+                onClick={() => setShow(false)}
               >
                 FAQ
               </ScrollLink>

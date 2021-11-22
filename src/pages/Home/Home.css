@@ -87,17 +87,14 @@
   -o-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
   position: relative;
-  animation-play-state: running;
 }
 .hero-right .swiper-container .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
   -o-transition-timing-function: linear !important;
   transition-timing-function: linear !important;
-  transition-delay: 0;
-  transition-property: all;
+  /* transition-delay: 0 !important; */
 
   position: relative;
-  visibility: visible;
 }
 
 .hero-right .swiper-container:nth-child(1),

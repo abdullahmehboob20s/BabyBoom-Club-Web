@@ -130,16 +130,13 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 100,
+                delay: 500,
                 reverseDirection: true,
                 disableOnInteraction: false,
               }}
               loopedSlides={5}
               grabCursor={true}
               slidesPerView="auto"
-              onInit={(swiper) => {
-                console.log(swiper);
-              }}
             >
               <SwiperSlide>
                 <img src={img1} alt="" />
@@ -160,7 +157,7 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 100,
+                delay: 500,
                 disableOnInteraction: false,
               }}
               disableOnInteraction={true}
@@ -188,7 +185,7 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 100,
+                delay: 500,
                 reverseDirection: true,
                 disableOnInteraction: false,
               }}
