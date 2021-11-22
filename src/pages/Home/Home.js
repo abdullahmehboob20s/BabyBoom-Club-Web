@@ -28,36 +28,15 @@ import Roadmap from "layouts/Roadmap/Roadmap";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
+import CountDownTimer from "components/CountDownTimer/CountDownTimer";
 
 SwiperCore.use([Autoplay, Navigation]);
 
 function Home() {
   let navigationPrevRef = React.useRef(null);
   let navigationNextRef = React.useRef(null);
-
-  let [timer, setTimer] = React.useState({
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
-  React.useEffect(() => {
-    const handler = () => {
-      let time = new Date();
-      setTimer({
-        hours: time.getHours() < 10 ? "0" + time.getHours() : time.getHours(),
-        minutes:
-          time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes(),
-        seconds:
-          time.getSeconds() < 10 ? "0" + time.getSeconds() : time.getSeconds(),
-      });
-    };
-    setInterval(handler, 1000);
-
-    return () => {
-      clearInterval(handler);
-    };
-  }, []);
+  const [slidPrevsBtn, setSlidPrevsBtn] = React.useState(false);
+  const [slidNextBtn, setSlidNextBtn] = React.useState(true);
 
   return (
     <div>
@@ -84,28 +63,10 @@ function Home() {
               ERC-721 NFT.
             </p>
 
-            <div className="timer mb-60px">
-              <div className="time-wrap">
-                <div className="teko timer-number fs-144px pink ">
-                  {timer.hours}
-                </div>
-                <span className="fs-30px weight-6 dark-blue"> HRS</span>
-              </div>
-              <div className="timer-dot pink"></div>
-              <div className="time-wrap">
-                <span className="teko timer-number fs-144px pink ">
-                  {timer.minutes}
-                </span>
-                <span className="fs-30px weight-6 dark-blue">MIN</span>
-              </div>
-              <div className="timer-dot pink"></div>
-              <div className="time-wrap">
-                <span className="teko timer-number fs-144px pink ">
-                  {timer.seconds}
-                </span>
-                <span className="fs-30px weight-6 dark-blue">SEC</span>
-              </div>
+            <div className="mb-60px">
+              <CountDownTimer />
             </div>
+
             {/* 
             <div className="hero-input mb-40px">
               <div className="hero-dropdown fs-24px light-gray">
@@ -283,6 +244,18 @@ function Home() {
                 <Swiper
                   slidesPerView={4}
                   spaceBetween={60}
+                  onSlideChange={(e) => {
+                    if (e.isEnd) {
+                      setSlidNextBtn(false);
+                    } else {
+                      setSlidNextBtn(true);
+                    }
+                    if (e.isBeginning) {
+                      setSlidPrevsBtn(false);
+                    } else {
+                      setSlidPrevsBtn(true);
+                    }
+                  }}
                   onSwiper={(swiper) => {
                     setTimeout(() => {
                       swiper.params.navigation.prevEl =
@@ -385,10 +358,18 @@ function Home() {
               </div>
 
               <div className="slider-btns mb-100px">
-                <button className="pointer" ref={navigationPrevRef}>
+                <button
+                  className="pointer"
+                  style={{ display: slidPrevsBtn ? "flex" : "none" }}
+                  ref={navigationPrevRef}
+                >
                   <HiArrowNarrowLeft />
                 </button>
-                <button className="pointer" ref={navigationNextRef}>
+                <button
+                  className="pointer"
+                  style={{ display: slidNextBtn ? "flex" : "none" }}
+                  ref={navigationNextRef}
+                >
                   <HiArrowNarrowRight />
                 </button>
               </div>
