@@ -130,16 +130,13 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 500,
+                delay: 1000,
                 reverseDirection: true,
                 disableOnInteraction: false,
               }}
               loopedSlides={5}
               grabCursor={true}
               slidesPerView="auto"
-              onInit={(swiper) => {
-                swiper.autoplay.start();
-              }}
               init={(swiper) => {
                 swiper.autoplay.run();
               }}
@@ -163,7 +160,7 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 500,
+                delay: 1000,
                 disableOnInteraction: false,
               }}
               disableOnInteraction={true}
@@ -191,7 +188,7 @@ function Home() {
               loop={true}
               speed={4000}
               autoplay={{
-                delay: 500,
+                delay: 1000,
                 reverseDirection: true,
                 disableOnInteraction: false,
               }}
