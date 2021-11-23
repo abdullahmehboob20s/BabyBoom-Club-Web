@@ -6,6 +6,7 @@ import { FiInstagram } from "react-icons/fi";
 import { BsTwitter } from "react-icons/bs";
 import SocialIcon from "components/SocialIcon/SocialIcon";
 import { FaDiscord } from "react-icons/fa";
+import { Link as ScrollLink } from "react-scroll";
 
 function Footer() {
   return (
@@ -25,21 +26,36 @@ function Footer() {
           </p>
 
           <div className="footer-links text-center mb-75px">
-            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
+            <ScrollLink
+              to="home"
+              className="fs-24px weight-6 dark-blue footer-link pointer"
+            >
               Home
-            </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
+            </ScrollLink>
+            <ScrollLink
+              to="about"
+              className="fs-24px weight-6 dark-blue footer-link pointer"
+            >
               About
-            </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
+            </ScrollLink>
+            <ScrollLink
+              to="roadmap"
+              className="fs-24px weight-6 dark-blue footer-link pointer"
+            >
               Road Map
-            </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
+            </ScrollLink>
+            <ScrollLink
+              to="team"
+              className="fs-24px weight-6 dark-blue footer-link pointer"
+            >
               Team
-            </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
+            </ScrollLink>
+            <ScrollLink
+              to="faq"
+              className="fs-24px weight-6 dark-blue footer-link pointer"
+            >
               FAQ
-            </Link>
+            </ScrollLink>
           </div>
 
           <div className="verified mb-50px">
