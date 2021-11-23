@@ -19,7 +19,6 @@
   align-items: center;
   justify-content: space-between;
   /* border: 2px solid red; */
-  gap: 85px;
 }
 
 .hamburger {
@@ -30,6 +29,7 @@
 .navbar-left {
   display: flex;
   align-items: center;
+  margin-right: 85px;
 }
 
 .navbar-right {
@@ -41,7 +41,9 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+}
+.nav-link:not(:last-child) {
+  margin-right: 36px;
 }
 
 .nav-btn {
@@ -66,6 +68,10 @@
     cursor: pointer;
   }
 
+  .navbar-left {
+    margin-right: 10px;
+  }
+
   .navbar-right {
     position: fixed;
     top: 0;
@@ -79,7 +85,6 @@
     z-index: 100000000000;
     background-color: white;
     flex-direction: column;
-    gap: 2rem;
     padding: 2.5rem;
 
     transition: all 0.2s ease;
@@ -93,7 +98,14 @@
     flex-direction: column;
     justify-content: unset;
     align-items: unset;
-    gap: 2rem;
+  }
+
+  .nav-link:not(:last-child) {
+    margin-right: 0rem;
+    margin-bottom: 2rem;
+  }
+  .nav-link {
+    margin-bottom: 2rem;
   }
 
   .cross-icon {
@@ -101,5 +113,6 @@
     position: relative;
     z-index: 100000;
     cursor: pointer;
+    margin-bottom: 2rem;
   }
 }

@@ -23,7 +23,6 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 5rem;
   height: 100%;
   overflow-x: hidden;
 }
@@ -31,6 +30,7 @@
 .hero-left {
   /* border: 2px solid red; */
   padding: 4rem 0;
+  margin-right: 5rem;
 }
 
 .hero-left,
@@ -48,7 +48,6 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1.5rem;
   overflow: hidden;
   margin-right: -50px;
 }
@@ -56,6 +55,9 @@
 .hero-right .row:nth-child(1),
 .hero-right .row:nth-child(3) {
   height: 80%;
+}
+.hero-right .swiper-container:not(:last-child) {
+  margin-right: 1.5rem;
 }
 .hero-right .swiper-container {
   -webkit-transition-timing-function: linear !important;
@@ -90,9 +92,13 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1.5rem;
 }
-
+.time-wrap:not(:last-child) {
+  margin-right: 1.5rem;
+}
+.timer-dot {
+  margin-right: 1.5rem;
+}
 .time-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +108,6 @@
   -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
-  gap: 0.8rem;
 }
 
 .timer-number {
@@ -112,6 +117,7 @@
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   width: 110px;
+  margin-bottom: 0.8rem;
 }
 
 .timer-dot {
@@ -128,7 +134,10 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 1rem;
+}
+
+.hero-btns button:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .hero-btns button {
@@ -164,6 +173,7 @@
   align-items: center;
   cursor: pointer;
   gap: 0.5rem;
+  /* border: 2px solid red; */
 }
 .arrow {
   display: block;
@@ -216,7 +226,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: 6rem;
+}
+.welcome-left {
+  margin-right: 6rem;
 }
 .welcome-left,
 .welcome-right {
@@ -260,9 +272,11 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  gap: 24px;
 }
 
+.slider-btns button:first-child {
+  margin-right: 24px;
+}
 .slider-btns button {
   width: 60px;
   height: 60px;
@@ -292,7 +306,9 @@
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  gap: 18px;
+}
+.accordion:not(:last-child) {
+  margin-bottom: 18px;
 }
 /* our-team-wrapper ENDS */
 
@@ -469,28 +485,17 @@
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    gap: 1rem;
   }
 
   .hero-left {
     padding-right: 5rem;
+    margin-right: 0;
   }
 
   .hero-right {
     margin-right: 0;
     margin-right: 5%;
     max-height: 700px;
-  }
-
-  .hero-right .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 1.5rem;
   }
 
   .hero-right .row:nth-child(1),
@@ -516,18 +521,19 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    gap: 1rem;
   }
 
-  .time-wrap {
-    /* border: 2px solid red; */
-    gap: 0.1rem;
+  .time-wrap:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .timer-dot {
+    margin-right: 1rem;
   }
 
   .timer-number {
     height: 65px;
-    /* border: 2px solid red; */
     width: 60px;
+    margin-bottom: 0.5rem;
   }
 
   .timer-dot {
@@ -544,7 +550,6 @@
     -webkit-box-align: unset;
     -ms-flex-align: unset;
     align-items: unset;
-    gap: 0rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -552,6 +557,9 @@
     -webkit-box-pack: unset;
     -ms-flex-pack: unset;
     justify-content: unset;
+  }
+  .welcome-left {
+    margin-right: 0;
   }
   .welcome-left,
   .welcome-right {
@@ -586,7 +594,10 @@
     -webkit-box-align: unset;
     -ms-flex-align: unset;
     align-items: unset;
-    gap: 1rem;
+  }
+
+  .roadmap-box:not(:last-child) {
+    margin-bottom: 1rem;
   }
 
   .roadmap-box {
@@ -663,16 +674,8 @@
     justify-content: center;
   }
 
-  .hero {
-    gap: 0;
-  }
-
   .hero-right {
     max-height: 300px;
-  }
-
-  .hero-right .row {
-    gap: 1rem;
   }
 
   .hero-right .row:nth-child(1),

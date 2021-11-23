@@ -8,18 +8,32 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(24px, 6.111111111111111vw, 88px);
+  flex-wrap: wrap;
+}
+.footer-link:not(:last-child) {
+  margin-right: 88px;
 }
 .verified {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+}
+.verified img {
+  margin-right: 24px;
 }
 
 .social-links {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
+}
+
+.social-links a:not(:last-child) {
+  margin-right: 18px;
+}
+
+@media (max-width: 1000px) {
+  .footer-link:not(:last-child) {
+    margin-right: 24px;
+  }
 }

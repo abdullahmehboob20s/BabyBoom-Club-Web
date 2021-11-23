@@ -13,7 +13,10 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  gap: 2rem;
+}
+
+.accordion-btn p {
+  margin-right: 2rem;
 }
 
 .accordion-btn p {

@@ -25,19 +25,19 @@ function Footer() {
           </p>
 
           <div className="footer-links text-center mb-75px">
-            <Link to="/" className="fs-24px weight-6 dark-blue">
+            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
               Home
             </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue">
+            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
               About
             </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue">
+            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
               Road Map
             </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue">
+            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
               Team
             </Link>
-            <Link to="/" className="fs-24px weight-6 dark-blue">
+            <Link to="/" className="fs-24px weight-6 dark-blue footer-link">
               FAQ
             </Link>
           </div>
